@@ -9,7 +9,8 @@
 - Приложение отправляет телеметрию в коллектор
   - Чтобы работал коллектор надо его установить при помощи каоманды ниже
 - Коллектор собирает данные и отправляет их в signoz
-  - Нужно установить [signoz](https://signoz.io/docs/install/docker/#install-signoz-using-docker-compose) на сервер 
+  - Нужно установить [signoz](https://signoz.io/docs/install/docker/#install-signoz-using-docker-compose) на сервер
+  - Примечание: удалить в ~/signoz/deploy/docker/clickhouse-setup/docker-compose.yaml hotrod и load-hotrod чтобы убрать тестовые данные
 
 
 ### Телеметрия на локальном сервере
