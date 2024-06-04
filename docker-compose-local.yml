@@ -1,0 +1,21 @@
+networks:
+  otel:
+
+services:
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - ./zipkin/collector-config.yaml:/etc/otelcol-contrib/config.yaml
+    ports:
+      - ${OTEL_FORWARD_PORT:-4318}:4318
+    networks:
+      - otel
+
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - ${OTEL_ZIPKIN_PORT:-9411}:9411
+    networks:
+      - otel
