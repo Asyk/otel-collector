@@ -18,7 +18,7 @@
 
 **Скопировать и настроить:**
 ```shell
-cp ./signoiz/example.collector-config.yaml ./signoiz/collector-config.yaml
+cp ./zipkin/example.collector-config.yaml ./zipkin/collector-config.yaml
 ```
 
 **Для запуска:**
@@ -33,7 +33,7 @@ docker compose -f docker-compose-local.yaml up -d
 
 **Скопировать и настроить:**
 ```shell
-cp ./signoiz/example.collector-config.yaml ./signoiz/collector-config.yaml
+cp ./signoz/example.collector-config.yaml ./signoz/collector-config.yaml
 ```
 
 **Для запуска:**
