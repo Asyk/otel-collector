@@ -7,7 +7,7 @@
 
 #### Как все работает
 - Приложение отправляет телеметрию в коллектор
-  - Чтобы работал коллектор надо его установить при помощи каоманды ниже
+  - Чтобы работал коллектор надо его установить при помощи команды ниже
 - Коллектор собирает данные и отправляет их в signoz
   - Нужно установить [signoz](https://signoz.io/docs/install/docker/#install-signoz-using-docker-compose) на сервер
   - Примечание: удалить в ~/signoz/deploy/docker/clickhouse-setup/docker-compose.yaml hotrod и load-hotrod чтобы убрать тестовые данные
@@ -15,6 +15,11 @@
 
 ### Телеметрия на локальном сервере
 Данные записываются в zipkin который работает на маршруте http://localhost:9411/zipkin/
+
+**Скопировать и настроить:**
+```shell
+cp ./signoiz/example.collector-config.yaml ./signoiz/collector-config.yaml
+```
 
 **Для запуска:**
 ```shell
@@ -25,6 +30,11 @@ docker compose -f docker-compose-local.yaml up -d
 
 ### Телеметрия на боевом сервере
 Данные записываются на сервер signoz
+
+**Скопировать и настроить:**
+```shell
+cp ./signoiz/example.collector-config.yaml ./signoiz/collector-config.yaml
+```
 
 **Для запуска:**
 ```shell
